@@ -1,0 +1,44 @@
+
+.hero-section {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: #f8ebdd;
+}
+
+.hero-banner {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hero-shop-button {
+  position: absolute;
+  left: 50%;
+  bottom: 7%;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 30px;
+  background-color: #641e2b;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.hero-shop-button:hover {
+  background-color: #b65d3d;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .hero-shop-button {
+    padding: 7px 16px;
+    font-size: 11px;
+    bottom: 5%;
+  }
+}

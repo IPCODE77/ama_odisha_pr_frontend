@@ -1,0 +1,29 @@
+
+:root {
+  /* AMA ODISHA Brand Colours */
+  --color-primary: #641E2B;
+  --color-secondary: #B65D3D;
+  --color-gold: #C4A46B;
+
+  /* Background Colours */
+  --color-background: #F7F1E7;
+  --color-white: #FFFFFF;
+  --color-surface: #EFE6D8;
+
+  /* Text Colours */
+  --color-heading: #302820;
+  --color-text: #655B50;
+  --color-muted: #92877B;
+
+  /* Typography */
+  --font-primary: 'Poppins', sans-serif;
+  --font-heading: 'Playfair Display', serif;
+
+  /* Layout */
+  --container-width: 1200px;
+  --section-padding: 80px;
+
+  /* Effects */
+  --shadow-card: 0 4px 20px rgba(48, 40, 32, 0.08);
+  --border-radius: 10px;
+}

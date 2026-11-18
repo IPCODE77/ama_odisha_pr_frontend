@@ -1,0 +1,16 @@
+
+.page-content {
+  width: min(92%, var(--container-width));
+  min-height: 60vh;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+.page-content h1 {
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.page-content p {
+  color: var(--color-text);
+}
