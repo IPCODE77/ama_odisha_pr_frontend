@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
 import {
@@ -13,6 +13,7 @@ import {
 import {
   Search,
   ShoppingCart,
+  ShoppingCartPlus,
   Menu,
   X
 } from 'lucide-react';
@@ -20,6 +21,7 @@ import {
 import logo from '../../assets/images/ama-odisha-logo.png';
 
 import './Header.css';
+
 
 const navigationItems = [
   { label: 'Home', path: '/' },
@@ -29,6 +31,8 @@ const navigationItems = [
   { label: 'Blog', path: '/blog' },
   { label: 'Contact', path: '/contact' }
 ];
+
+// /Demo Offer Items/
 
 function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -46,6 +50,47 @@ function Header() {
     }
   };
 
+  const offers = [
+  {
+    label: 'WELCOME OFFER',
+    title: 'Get 10% OFF',
+    subtitle: 'On your first order',
+    code: 'AMA10',
+    icon: '🎁',
+  },
+  {
+    label: 'SPECIAL DELIVERY',
+    title: 'FREE DELIVERY',
+    subtitle: 'On orders above ₹499',
+    code: 'FREE499',
+    icon: '🚚',
+  },
+  {
+    label: 'ODISHA SPECIAL',
+    title: 'Taste of Odisha',
+    subtitle: 'Traditional flavours, delivered with love',
+    code: 'EXPLORE',
+    icon: '❤️',
+  },
+  {
+    label: 'EXCLUSIVE OFFER',
+    title: 'Something Delicious Awaits!',
+    subtitle: 'Explore our traditional collection',
+    code: 'SHOP NOW',
+    icon: '✨',
+  },
+];
+
+  const [offerIndex, setOfferIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setOfferIndex((previous) => (previous + 1) % offers.length);
+    }, 3500);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <>
       <AppBar position="sticky" elevation={0} className="site-header">
@@ -57,6 +102,31 @@ function Header() {
           <Link to="/" className="header-logo">
             <img src={logo} alt="AMA ODISHA" />
           </Link>
+          <div className="header-offer">
+            <div className="offer-card" key={offerIndex}>
+
+              <div className="offer-icon">
+                {offers[offerIndex].icon}
+              </div>
+
+              <div className="offer-details">
+                <span className="offer-label">
+                  {offers[offerIndex].label}
+                </span>
+
+                <h4>{offers[offerIndex].title}</h4>
+
+                <p>{offers[offerIndex].subtitle}</p>
+              </div>
+
+              <div className="offer-code">
+                <span>USE CODE</span>
+                <strong>{offers[offerIndex].code}</strong>
+              </div>
+
+            </div>
+          </div>
+
 
           {/* SEARCH */}
           <form className="header-search" onSubmit={handleSearch}>
@@ -85,7 +155,7 @@ function Header() {
               className="cart-button"
             >
               <Badge badgeContent={0} color="primary" showZero={false}>
-                <ShoppingCart size={25} />
+                <ShoppingCartPlus size={25} />
               </Badge>
             </IconButton>
 

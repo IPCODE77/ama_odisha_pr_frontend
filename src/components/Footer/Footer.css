@@ -1,0 +1,444 @@
+
+/* =====================================
+   FOOTER MAIN
+===================================== */
+
+.footer-section {
+  background-color: #641e2b;
+  color: #f8ebdd;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Gold heritage decoration.
+   Add footer-heritage.png to assets/images
+   when the transparent artwork is ready. */
+
+
+.footer-main {
+  position: relative;
+  padding: 65px 25px 55px;
+
+  background-image:
+    linear-gradient(
+      rgba(100, 30, 43, 0.55),
+      rgba(100, 30, 43, 0.55)
+    ),
+    url('../../assets/images/footer-heritage.png');
+
+  background-repeat: no-repeat, no-repeat;
+
+  background-position: center, right center;
+
+  background-size: 100% 100%, auto 100%;
+}
+
+
+.footer-container {
+  max-width: 1250px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.25fr 0.8fr 1fr 1.25fr;
+  gap: 35px;
+}
+
+/* =====================================
+   BRAND
+===================================== */
+
+.footer-brand {
+  padding-right: 20px;
+}
+
+.footer-logo img {
+  width: 190px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.footer-tagline {
+  color: #e8c58d;
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+.footer-divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #d8a64d;
+  font-size: 11px;
+  margin: 20px 0;
+}
+
+.footer-divider span {
+  height: 1px;
+  flex: 1;
+  background: #d8a64d;
+}
+
+.footer-description {
+  color: #f1dfcf;
+  font-size: 13px;
+  line-height: 1.9;
+  margin-bottom: 22px;
+}
+
+/* =====================================
+   SOCIAL ICONS
+===================================== */
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-socials a {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e9c47d;
+  border: 1px solid #d8a64d;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.footer-socials a:hover {
+  background: #d8a64d;
+  color: #641e2b;
+  transform: translateY(-3px);
+}
+
+/* =====================================
+   FOOTER COLUMNS
+===================================== */
+
+.footer-column {
+  border-left: 1px solid rgba(216, 166, 77, 0.45);
+  padding-left: 25px;
+}
+
+.footer-column h3 {
+  color: #f3d8a5;
+  font-family: 'Playfair Display', serif;
+  font-size: 19px;
+  margin-bottom: 25px;
+  line-height: 1.4;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  margin-bottom: 15px;
+}
+
+.footer-column li a {
+  display: flex;
+  gap: 10px;
+  color: #f1dfcf;
+  text-decoration: none;
+  font-size: 13px;
+  transition: color 0.3s ease;
+}
+
+.footer-column li a span {
+  color: #e2b65f;
+  font-size: 19px;
+  line-height: 15px;
+}
+
+.footer-column li a:hover {
+  color: #e2b65f;
+}
+
+/* CONTACT */
+
+.footer-contact {
+  margin-top: 25px;
+}
+
+.footer-contact p {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #e8d2bf;
+  font-size: 12px;
+  margin-bottom: 12px;
+  overflow-wrap: anywhere;
+}
+
+.footer-contact svg {
+  color: #e2b65f;
+  flex-shrink: 0;
+}
+
+/* =====================================
+   NEWSLETTER
+===================================== */
+
+.footer-newsletter > p {
+  color: #e8d2bf;
+  font-size: 13px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.footer-subscribe {
+  display: flex;
+  align-items: center;
+  border: 1px solid #d8a64d;
+  border-radius: 30px;
+  padding: 5px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.footer-subscribe input {
+  width: 100%;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  padding: 10px 12px;
+  font-size: 12px;
+}
+
+.footer-subscribe input::placeholder {
+  color: #dfc9b7;
+}
+
+.footer-subscribe button {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  border: none;
+  border-radius: 50%;
+  background: #d8a64d;
+  color: #641e2b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.footer-subscribe button:hover {
+  background: #f1d39c;
+}
+
+/* =====================================
+   PAYMENT METHODS
+===================================== */
+
+.footer-payment {
+  margin-top: 28px;
+}
+
+.footer-payment h4 {
+  color: #f3d8a5;
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.payment-methods {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.payment-methods span {
+  color: #641e2b;
+  background: #f4e5cf;
+  padding: 6px 9px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+/* =====================================
+   FOOTER BOTTOM
+===================================== */
+
+.footer-bottom {
+  border-top: 3px solid #d8a64d;
+  background: #4e1722;
+  padding: 20px 25px;
+}
+
+.footer-bottom-container {
+  max-width: 1250px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-bottom p {
+  color: #e8d2bf;
+  font-size: 12px;
+  margin: 0;
+}
+
+.footer-made {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer-made svg {
+  color: #e34b50;
+}
+
+.footer-legal {
+  display: flex;
+  gap: 18px;
+}
+
+.footer-legal a {
+  color: #e8d2bf;
+  text-decoration: none;
+  font-size: 11px;
+}
+
+.footer-legal a:hover {
+  color: #e2b65f;
+}
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 1000px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 30px;
+  }
+
+  .footer-brand {
+    padding-right: 15px;
+  }
+
+  .footer-bottom-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 600px) {
+  .footer-main {
+    padding: 45px 22px 35px;
+    /* background-position: right bottom;
+    background-size: auto 65%; */
+
+     background-image: none;
+    background-color: #641e2b;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-brand {
+    padding-right: 0;
+  }
+
+  .footer-logo img {
+    width: 170px;
+  }
+
+  .footer-column {
+    border-left: none;
+    border-top: 1px solid rgba(216, 166, 77, 0.4);
+    padding: 25px 0 0;
+  }
+
+  .footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 18px;
+  }
+
+  .footer-column li {
+    margin-bottom: 13px;
+  }
+
+  .footer-bottom {
+    padding: 22px 15px;
+  }
+
+  .footer-bottom-container {
+    flex-direction: column;
+    gap: 13px;
+  }
+
+  .footer-bottom p {
+    font-size: 11px;
+  }
+
+  .footer-legal {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+  }
+}
+/* PAYMENT LOGOS */
+
+.footer-payment {
+  margin-top: 30px;
+}
+
+.footer-payment h4 {
+  color: #f3d9ad;
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.footer-payment-logos {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-payment-logos img {
+  width: 55px;
+  height: 35px;
+  object-fit: contain;
+  padding: 5px;
+  background: #fff;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.footer-payment-logos img:hover {
+  transform: translateY(-3px);
+}
+
+@media (max-width: 600px) {
+  .footer-payment-logos {
+    gap: 10px;
+  }
+
+  .footer-payment-logos img {
+    width: 52px;
+    height: 34px;
+  }
+}

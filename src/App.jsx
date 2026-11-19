@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Header from './components/Header/Header';  
 import Home from './pages/Home/Home';
-
+import Footer from './components/Footer/Footer';
 // Temporary page components
 
 function Shop() {
@@ -44,6 +44,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/cart" element={<Cart />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
