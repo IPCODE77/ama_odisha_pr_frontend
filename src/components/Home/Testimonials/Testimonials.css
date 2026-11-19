@@ -1,0 +1,328 @@
+
+/* =========================================
+   TESTIMONIALS SECTION
+========================================= */
+
+.testimonials-section {
+  position: relative;
+  overflow: hidden;
+  padding: 75px 0 55px;
+  background-color: #fff5e9;
+  background-image: url('../../../assets/images/odisha-heritage.png');
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: auto 100%;
+}
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.testimonials-heading {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 20px;
+  margin-bottom: 40px;
+}
+
+.testimonials-eyebrow {
+  color: #b65d3d;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.testimonials-heading h2 {
+  color: #641e2b;
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.testimonials-heading p {
+  color: #655b50;
+  font-size: 14px;
+  margin: 0;
+}
+
+.testimonials-divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  color: #b65d3d;
+  margin-top: 15px;
+  font-size: 11px;
+}
+
+.testimonials-divider span {
+  width: 40px;
+  height: 1px;
+  background: #b65d3d;
+}
+
+/* =========================================
+   TESTIMONIAL SLIDER
+========================================= */
+
+.testimonials-slider {
+  position: relative;
+  z-index: 2;
+  width: 72%;
+  overflow: hidden;
+  margin-right: auto;
+
+  /* Fade reviews into the heritage artwork */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    black 0%,
+    black 82%,
+    transparent 100%
+  );
+
+  mask-image: linear-gradient(
+    to right,
+    black 0%,
+    black 82%,
+    transparent 100%
+  );
+}
+
+.testimonials-track {
+  display: flex;
+  width: max-content;
+  animation: testimonialScroll 45s linear infinite;
+}
+
+/* Pause animation when hovering over reviews */
+
+.testimonials-slider:hover .testimonials-track {
+  animation-play-state: paused;
+}
+
+/* Review groups */
+
+.testimonials-group {
+  display: flex;
+  flex-shrink: 0;
+  gap: 22px;
+  padding-right: 22px;
+}
+
+/* =========================================
+   REVIEW CARDS
+========================================= */
+
+.testimonial-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+
+  width: 310px;
+  min-height: 230px;
+  padding: 27px;
+
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid #ead8c3;
+  border-radius: 12px;
+
+  box-shadow: 0 5px 18px rgba(70, 35, 20, 0.07);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(70, 35, 20, 0.13);
+}
+
+/* Quote icon */
+
+.testimonial-quote-icon {
+  color: #e8c9a7;
+  margin-bottom: 12px;
+}
+
+/* Star rating */
+
+.testimonial-stars {
+  display: flex;
+  gap: 4px;
+  color: #d99b32;
+  margin-bottom: 14px;
+}
+
+/* Review text */
+
+.testimonial-review {
+  color: #655b50;
+  font-size: 14px;
+  line-height: 1.8;
+  flex: 1;
+  margin: 0 0 20px;
+}
+
+/* =========================================
+   CUSTOMER DETAILS
+========================================= */
+
+.testimonial-customer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  border-top: 1px solid #eee2d5;
+  padding-top: 15px;
+}
+
+.testimonial-avatar {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+
+  border-radius: 50%;
+  background: #641e2b;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+}
+
+.testimonial-customer h4 {
+  color: #641e2b;
+  font-size: 13px;
+  margin: 0 0 4px;
+}
+
+.testimonial-customer span {
+  color: #8b7d70;
+  font-size: 11px;
+}
+
+/* =========================================
+   CONTINUOUS ANIMATION
+========================================= */
+
+@keyframes testimonialScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Demo review note */
+
+.testimonials-demo-note {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #9a8878;
+  font-size: 11px;
+  margin-top: 25px;
+}
+
+/* =========================================
+   TABLET RESPONSIVENESS
+========================================= */
+
+@media (max-width: 900px) {
+  .testimonials-section {
+    background-size: auto 75%;
+  }
+
+  .testimonials-slider {
+    width: 78%;
+  }
+
+  .testimonials-heading h2 {
+    font-size: 31px;
+  }
+
+  .testimonial-card {
+    width: 290px;
+    min-height: 225px;
+    padding: 23px;
+  }
+}
+
+/* =========================================
+   MOBILE RESPONSIVENESS
+========================================= */
+
+@media (max-width: 600px) {
+  .testimonials-section {
+    padding: 45px 0 35px;
+    background-position: right bottom;
+    background-size: auto 45%;
+  }
+
+  .testimonials-heading {
+    margin-bottom: 28px;
+  }
+
+  .testimonials-heading h2 {
+    font-size: 25px;
+  }
+
+  .testimonials-heading p {
+    font-size: 12px;
+  }
+
+  .testimonials-eyebrow {
+    font-size: 10px;
+  }
+
+  .testimonials-slider {
+    width: 100%;
+
+    /* No fade on small screens */
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .testimonials-group {
+    gap: 14px;
+    padding-right: 14px;
+  }
+
+  .testimonial-card {
+    width: 260px;
+    min-height: 215px;
+    padding: 22px;
+  }
+
+  .testimonial-review {
+    font-size: 13px;
+  }
+
+  .testimonials-track {
+    animation-duration: 38s;
+  }
+
+  .testimonials-demo-note {
+    font-size: 10px;
+    padding: 0 10px;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .testimonials-track {
+    animation: none;
+  }
+}
