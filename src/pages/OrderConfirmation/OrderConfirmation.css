@@ -1,0 +1,176 @@
+.order-confirmation-page {
+    min-height: 85vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 60px 20px 300px;
+    background-color: #fff4e3;
+    background-image: url('../../assets/images/order-success-bg.png');
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+/* Success Card */
+.order-success-card {
+    width: 100%;
+    max-width: 750px;
+    text-align: center;
+    padding: 20px;
+    background: transparent;
+}
+
+/* Success Icon */
+.success-icon {
+    width: 85px;
+    height: 85px;
+    margin: 0 auto 22px;
+    border-radius: 50%;
+    background: #239b43;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(35, 155, 67, 0.2);
+}
+
+/* Heading */
+.order-success-card h1 {
+    color: #3b2415;
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+/* Subtitle */
+.success-subtitle {
+    color: #5c4532;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* Order ID */
+.order-id-box {
+    display: inline-block;
+    background: #ffe2b8;
+    color: #6a3518;
+    padding: 13px 25px;
+    border-radius: 12px;
+    font-size: 17px;
+    margin-bottom: 22px;
+}
+
+/* Email */
+.confirmation-email {
+    color: #5c4532;
+    font-size: 16px;
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+/* Buttons */
+.confirmation-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.track-order-btn,
+.continue-shopping-btn {
+    padding: 14px 30px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Track Order */
+.track-order-btn {
+    background: #a52b13;
+    color: #ffffff;
+    border: 2px solid #a52b13;
+}
+
+.track-order-btn:hover {
+    background: #7e1e0b;
+    border-color: #7e1e0b;
+    transform: translateY(-2px);
+}
+
+/* Continue Shopping */
+.continue-shopping-btn {
+    background: transparent;
+    color: #6a3518;
+    border: 2px solid #8b451f;
+}
+
+.continue-shopping-btn:hover {
+    background: #8b451f;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .order-confirmation-page {
+        min-height: 80vh;
+        padding: 40px 15px 220px;
+        background-size: auto 280px;
+    }
+
+    .order-success-card {
+        padding: 10px;
+    }
+
+    .success-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 35px;
+        margin-bottom: 18px;
+    }
+
+    .order-success-card h1 {
+        font-size: 27px;
+    }
+
+    .success-subtitle {
+        font-size: 15px;
+    }
+
+    .order-id-box {
+        font-size: 14px;
+        padding: 11px 18px;
+    }
+
+    .confirmation-email {
+        font-size: 14px;
+    }
+
+    .confirmation-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .track-order-btn,
+    .continue-shopping-btn {
+        width: 100%;
+        max-width: 300px;
+        padding: 13px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .order-confirmation-page {
+        padding-top: 30px;
+        background-size: auto 220px;
+    }
+
+    .order-success-card h1 {
+        font-size: 24px;
+    }
+}

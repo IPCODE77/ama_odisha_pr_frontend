@@ -1,0 +1,85 @@
+
+.shop-sidebar {
+  width: 165px;
+  min-width: 165px;
+  padding: 25px 20px;
+  border-right: 1px solid #eadbc8;
+  background-color: #fbf4e9;
+}
+
+.shop-sidebar h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  color: #641e2b;
+  margin-bottom: 20px;
+}
+
+.shop-category-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.shop-category-list li {
+  margin-bottom: 8px;
+}
+
+.shop-category-btn {
+  width: 100%;
+  text-align: left;
+  border: none;
+  background: transparent;
+  padding: 11px 14px;
+  border-radius: 7px;
+  color: #302820;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.shop-category-btn:hover {
+  background-color: #f0dfcc;
+  color: #641e2b;
+}
+
+.shop-category-btn.active {
+  background-color: #641e2b;
+  color: #fff;
+  box-shadow: 0 3px 8px rgba(100, 30, 43, 0.15);
+}
+
+/* TABLET */
+
+@media (max-width: 768px) {
+  .shop-sidebar {
+    width: 100%;
+    min-width: unset;
+    padding: 20px;
+    border-right: none;
+    border-bottom: 1px solid #eadbc8;
+  }
+
+  .shop-sidebar h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .shop-category-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .shop-category-list li {
+    margin-bottom: 0;
+  }
+
+  .shop-category-btn {
+    width: auto;
+    padding: 9px 15px;
+    border: 1px solid #eadbc8;
+    border-radius: 25px;
+    font-size: 13px;
+  }
+}

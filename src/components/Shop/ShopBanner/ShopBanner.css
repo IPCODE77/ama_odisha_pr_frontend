@@ -1,0 +1,92 @@
+
+.shop-page-banner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: #f5e6cc;
+}
+
+.shop-banner-background {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.shop-banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 45%;
+  text-align: center;
+  z-index: 2;
+}
+
+.shop-banner-text span {
+  display: block;
+  color: #8b3a26;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+}
+
+.shop-banner-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(35px, 4vw, 65px);
+  color: #641e2b;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.shop-banner-text p {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(17px, 2vw, 30px);
+  font-style: italic;
+  color: #783b28;
+  margin-top: 12px;
+}
+
+/* TABLET */
+
+@media (max-width: 768px) {
+  .shop-banner-text {
+    width: 50%;
+  }
+
+  .shop-banner-text span {
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    margin-bottom: 6px;
+  }
+
+  .shop-banner-text h1 {
+    font-size: 30px;
+  }
+
+  .shop-banner-text p {
+    font-size: 16px;
+    margin-top: 6px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+  .shop-banner-text {
+    width: 48%;
+  }
+
+  .shop-banner-text span {
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+
+  .shop-banner-text h1 {
+    font-size: 21px;
+  }
+
+  .shop-banner-text p {
+    font-size: 12px;
+  }
+}

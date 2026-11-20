@@ -1,6 +1,8 @@
 
 import { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { useCart } from '../../context/CartContext';
+import { useNavigate } from 'react-router-dom';
 
 import {
   AppBar,
@@ -19,6 +21,7 @@ import {
 } from 'lucide-react';
 
 import logo from '../../assets/images/ama-odisha-logo.png';
+import { FaRegUser } from 'react-icons/fa';
 
 import './Header.css';
 
@@ -37,6 +40,7 @@ const navigationItems = [
 function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [searchValue, setSearchValue] = useState('');
+  const { cartCount } = useCart();
 
   const closeMobileMenu = () => {
     setMobileOpen(false);
@@ -51,37 +55,38 @@ function Header() {
   };
 
   const offers = [
-  {
-    label: 'WELCOME OFFER',
-    title: 'Get 10% OFF',
-    subtitle: 'On your first order',
-    code: 'AMA10',
-    icon: '🎁',
-  },
-  {
-    label: 'SPECIAL DELIVERY',
-    title: 'FREE DELIVERY',
-    subtitle: 'On orders above ₹499',
-    code: 'FREE499',
-    icon: '🚚',
-  },
-  {
-    label: 'ODISHA SPECIAL',
-    title: 'Taste of Odisha',
-    subtitle: 'Traditional flavours, delivered with love',
-    code: 'EXPLORE',
-    icon: '❤️',
-  },
-  {
-    label: 'EXCLUSIVE OFFER',
-    title: 'Something Delicious Awaits!',
-    subtitle: 'Explore our traditional collection',
-    code: 'SHOP NOW',
-    icon: '✨',
-  },
-];
+    {
+      label: 'WELCOME OFFER',
+      title: 'Get 10% OFF',
+      subtitle: 'On your first order',
+      code: 'AMA10',
+      icon: '🎁',
+    },
+    {
+      label: 'SPECIAL DELIVERY',
+      title: 'FREE DELIVERY',
+      subtitle: 'On orders above ₹499',
+      code: 'FREE499',
+      icon: '🚚',
+    },
+    {
+      label: 'ODISHA SPECIAL',
+      title: 'Taste of Odisha',
+      subtitle: 'Traditional flavours, delivered with love',
+      code: 'EXPLORE',
+      icon: '❤️',
+    },
+    {
+      label: 'EXCLUSIVE OFFER',
+      title: 'Something Delicious Awaits!',
+      subtitle: 'Explore our traditional collection',
+      code: 'SHOP NOW',
+      icon: '✨',
+    },
+  ];
 
   const [offerIndex, setOfferIndex] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -148,6 +153,16 @@ function Header() {
           {/* HEADER ACTIONS */}
           <Box className="header-actions">
 
+            {/* Account Button */}
+            <IconButton
+              aria-label="User account"
+              className="account-button"
+              onClick={() => navigate('/login')}
+            >
+              <FaRegUser className="header-account-icon" />
+            </IconButton>
+
+            {/* Cart Button */}
             <IconButton
               aria-label="Shopping cart"
               component={Link}
@@ -155,10 +170,19 @@ function Header() {
               className="cart-button"
             >
               <Badge badgeContent={0} color="primary" showZero={false}>
-                <ShoppingCartPlus size={25} />
+                <div className="header-cart-wrapper">
+                  <ShoppingCart size={22} />
+
+                  {cartCount > 0 && (
+                    <span className="header-cart-count">
+                      {cartCount}
+                    </span>
+                  )}
+                </div>
               </Badge>
             </IconButton>
 
+            {/* Mobile Menu */}
             <IconButton
               className="mobile-menu-button"
               onClick={() => setMobileOpen(true)}
