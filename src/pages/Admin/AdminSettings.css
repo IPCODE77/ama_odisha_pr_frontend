@@ -1,0 +1,140 @@
+
+.admin-settings {
+    padding: 10px 5px;
+}
+
+.settings-heading {
+    margin-bottom: 25px;
+}
+
+.settings-heading h2 {
+    font-size: 26px;
+    color: #4b2e20;
+    margin-bottom: 6px;
+}
+
+.settings-heading p {
+    color: #8a7565;
+    font-size: 14px;
+}
+
+/* Settings Sections */
+
+.settings-form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.settings-section {
+    background: #fff;
+    border: 1px solid #eadfce;
+    border-radius: 14px;
+    padding: 25px;
+    box-shadow: 0 3px 10px rgba(75, 46, 32, 0.04);
+}
+
+.settings-section-heading {
+    margin-bottom: 22px;
+}
+
+.settings-section-heading h3 {
+    color: #4b2e20;
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+.settings-section-heading p {
+    color: #8a7565;
+    font-size: 13px;
+}
+
+.settings-fields-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.settings-field {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.settings-field label {
+    font-size: 14px;
+    color: #6d5140;
+    font-weight: 500;
+}
+
+.settings-field input,
+.settings-field select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #e4d6c4;
+    border-radius: 9px;
+    outline: none;
+    background: #fffdf9;
+    color: #4b2e20;
+    font-size: 14px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.settings-field input:focus,
+.settings-field select:focus {
+    border-color: #a56545;
+    box-shadow: 0 0 0 3px rgba(165, 101, 69, 0.12);
+}
+
+/* Save Area */
+
+.settings-save-area {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 18px;
+}
+
+.settings-success {
+    color: #60875c;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.settings-save-btn {
+    padding: 13px 25px;
+    background: #8b4b32;
+    color: #fff;
+    border: none;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.settings-save-btn:hover {
+    background: #713b27;
+    transform: translateY(-1px);
+}
+
+/* Responsive */
+
+@media (max-width: 700px) {
+    .settings-fields-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .settings-section {
+        padding: 18px;
+    }
+
+    .settings-save-area {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .settings-save-btn {
+        width: 100%;
+    }
+}

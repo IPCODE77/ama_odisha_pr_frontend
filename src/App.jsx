@@ -1,52 +1,56 @@
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 
-import Header from './components/Header/Header';  
+import Header from './components/Header/Header';
 import Home from './pages/Home/Home';
 import Footer from './components/Footer/Footer';
-// Temporary page components
+import Shop from './pages/Shop/Shop';
+import ProductDetails from './pages/ProductDetails/ProductDetails';
+import Cart from './pages/Cart/Cart';
+import Checkout from './pages/Checkout/Checkout';
+import OrderConfirmation from './pages/OrderConfirmation/OrderConfirmation';
+import Login from './pages/Auth/Login';
+import Signup from './pages/Auth/Signup';
+import ForgotPassword from './pages/Auth/ForgotPassword';
+import MyAccount from './pages/Account/MyAccount';
+import Wishlist from './pages/Wishlist/Wishlist';
+import AdminDashboard from './pages/Admin/AdminDashboard';
 
-function Shop() {
-  return <main className="page-content"><h1>Our Products</h1></main>;
-}
+function AppContent() {
+    const location = useLocation();
 
-function About() {
-  return <main className="page-content"><h1>Our Story</h1></main>;
-}
+    const isAdminPage = location.pathname.startsWith('/admin');
 
-function WhyAmaOdisha() {
-  return <main className="page-content"><h1>Why AMA ODISHA?</h1></main>;
-}
+    return (
+        <>
+            {!isAdminPage && <Header />}
 
-function Blog() {
-  return <main className="page-content"><h1>Blog & Recipes</h1></main>;
-}
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/shop" element={<Shop />} />
+                <Route path="/product/:id" element={<ProductDetails />} />
+                <Route path="/cart" element={<Cart />} />
+                <Route path="/checkout" element={<Checkout />} />
+                <Route path="/order-confirmation" element={<OrderConfirmation />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/signup" element={<Signup />} />
+                <Route path="/forgot-password" element={<ForgotPassword />} />
+                <Route path="/my-account" element={<MyAccount />} />
+                <Route path="/wishlist" element={<Wishlist />} />
+                <Route path="/admin" element={<AdminDashboard />} />
+            </Routes>
 
-function Contact() {
-  return <main className="page-content"><h1>Contact Us</h1></main>;
-}
-
-function Cart() {
-  return <main className="page-content"><h1>Your Shopping Cart</h1></main>;
+            {!isAdminPage && <Footer />}
+        </>
+    );
 }
 
 function App() {
-  return (
-    <BrowserRouter>
-      <Header />
-
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/shop" element={<Shop />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/why-ama-odisha" element={<WhyAmaOdisha />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/cart" element={<Cart />} />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
-  );
+    return (
+        <BrowserRouter>
+            <AppContent />
+        </BrowserRouter>
+    );
 }
 
 export default App;

@@ -1,0 +1,48 @@
+
+/* MAIN SHOP LAYOUT */
+
+.shop-page {
+  width: 100%;
+  background-color: #fbf1e3;
+}
+
+.shop-content-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+  min-width: 0;
+  background-color: #fbf1e3;
+}
+
+/* SIDEBAR */
+
+.shop-sidebar {
+  flex: 0 0 200px;
+  width: 200px;
+}
+
+/* PRODUCT AREA */
+
+.shop-product-grid-wrapper {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .shop-content-layout {
+    flex-direction: column;
+  }
+
+  .shop-sidebar {
+    flex: none;
+    width: 100%;
+  }
+
+  .shop-product-grid-wrapper {
+    width: 100%;
+  }
+}
